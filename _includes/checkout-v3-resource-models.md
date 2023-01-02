@@ -528,11 +528,12 @@ Content-Type: application/json
 
 ## Paid
 
-The payment order response with status `paid`, and the `paid` resource expanded.
-Please note that the main code example is of a **Card** payment. We have
-included `paid` resources of the remaining instruments below the main code
-example. Resource examples where details are empty indicate that no details are
-available.
+The payment order response with `status` equal to `Paid`, and the `paid`
+resource expanded. Please note that the main code example is of a card payment.
+
+We have included `paid` resources of the remaining instruments below the main
+code example. Resource examples where details are empty indicate that no details
+are available.
 
 The wallets Apple Pay and Vipps do not return `maskedPan`. Please note that
 while MobilePay does return this field, the value present is actually a

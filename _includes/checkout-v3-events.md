@@ -21,12 +21,15 @@ to the event handler you are overriding." %}
 
 ## `onAborted`
 
-This event triggers when the payer aborts the purchase from the payment menu. As
-the Seamless View payment menu doesn't have a cancel button (present in the
+{% include events/onaborted.md %}
+
+As the Seamless View payment menu doesn't have a cancel button (present in the
 Redirect integration), you need to provide this button for the payer at your
-end. When the payer presses the cancel button, we recommend sending an API
-request aborting the payment so it can't be completed at a later time. When we
-receive the request, an abort event will be raised the next time the UI fetches
+end.
+
+When the payer presses the cancel button, we recommend sending an API request
+aborting the payment so it can't be completed at a later time. When we receive
+the request, an abort event will be raised the next time the UI fetches
 information from the server. Because of that, you should also refresh after
 aborting, as this will trigger the event.
 
@@ -52,7 +55,7 @@ It will be raised with the following event argument object:
 
 ## `onCheckoutLoaded`
 
-This event triggers when the payment menu is rendered after being opened.
+{% include events/oncheckoutloaded.md %}
 
 Subscribe to this event if you need total control over the height of Swedbank
 Pay's payment frame. This is the initial height of the frame when loaded.
@@ -80,8 +83,7 @@ with the following event argument object:
 
 ## `onCheckoutResized`
 
-This event triggers every time a reconfiguration leads to resizing of the
-payment menu.
+{% include events/oncheckoutresized.md %}
 
 Subscribe to this event if you need total control over the height of Swedbank
 Pay's payment frame. The payment instruments requires individual heights when
@@ -111,8 +113,7 @@ will be raised with the following event argument object:
 
 ## `onError`
 
-This event triggers during terminal errors or if the configuration fails
-validation.
+{% include events/onerror.md %}
 
 Subscribe to this event if you want some action to occur on your site when an
 error happens during the payment.
@@ -140,8 +141,7 @@ will be raised with the following event argument object:
 
 ## `onEventNotification`
 
-This event triggers whenever any other public event is called. It does not
-prevent their handling.
+{% include events/oneventnotification.md %}
 
 Subscribe to this event in order to log actions that are happening in the
 payment flow at Swedbank Pay.
@@ -170,8 +170,7 @@ payment flow at Swedbank Pay.
 
 ## `onInstrumentSelected`
 
-This event triggers when a user actively changes payment instrument in the
-Payment Menu.
+{% include events/oninstrumentselected.md %}
 
 Subscribe to this event if actions, e.g. showing an information text, are
 required on your side if the payer changes payment instrument.
@@ -200,10 +199,10 @@ the user.                                                                       
 
 ## `onOutOfViewOpen`
 
-This event triggers when another tab is opened in the browser, like the
-information page for onboarding of stored cards, or Swedbank Pay's owner TOS. It
-cannot be opened as a modal since the payer needs to see that this is a link on
-Swedbank Pay's domain.
+{% include events/onoutofviewopen.md %}
+
+The event cannot be opened as a modal since the payer needs to see that this is
+a link on Swedbank Pay's domain.
 
 Subscribe to this event if you do not want the default handling of these links.
 But e.g. want to redirect the payer to a new page, and not just another tab
@@ -232,8 +231,7 @@ new tab. It will be raised with the following event argument object:
 
 ## `onOutOfViewRedirect`
 
-This event triggers when a user is redirected to a separate web page, like
-3D-Secure or BankID signing.
+{% include events/onoutofviewredirect.md %}
 
 Subscribe to this event if it's not possible to redirect the payer directly from
 within Swedbank Pay's payment frame.
@@ -261,8 +259,7 @@ will be raised with the following event argument object:
 
 ## `onPaid`
 
-This event triggers when the payer successfully completes or cancels the
-payment.
+{% include events/onpaid.md %}
 
 Subscribe to this event if actions are needed on you side other than the default
 handling of redirecting the payer to your `completeUrl`. Call GET on the
@@ -293,8 +290,9 @@ It will be raised with the following event argument object:
 
 ## `onPayerIdentified`
 
-This event triggers when a payer has been identified. This event is required for
-**Starter** to work, and there are two scenarios where it will occur.
+{% include events/onpayeridentified.md %}
+
+There are two scenarios where this event will occur:
 
 *   The **first** is when the payer has finalized checkin, where this is the
 expected merchant behavior:
@@ -344,6 +342,8 @@ following event argument object:
 
 ## `onPayerUnidentified`
 
+{% include events/onpayerunidentified.md %}
+
 This event triggers when a payer clicks "Not you" when identified with "Remember
 Me", and it is a mandatory event for **Starter** to work. It is a part of the
 acceptance criteria, meaning you won't get the green light to go live with your
@@ -379,8 +379,7 @@ It will be raised with the following event argument object:
 
 ## `onTermsOfServiceRequested`
 
-This event triggers when the user clicks on the "Display terms and conditions"
-link.
+{% include events/ontermsofservicerequested.md %}
 
 Subscribe to this event if you don't want the default handling of the
 `termsOfServiceUrl`. Swedbank Pay will open the `termsOfServiceUrl`

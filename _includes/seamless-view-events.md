@@ -202,9 +202,9 @@ It will be raised with the following event argument object:
 
 ## `onPaymentCreated`
 
-This event triggers when a user has selected a payment instrument and actively
-attempts to perform a payment. The `onPaymentCreated` event is raised with the
-following event argument object:
+{% include events/onpaymentcreated.md %}
+
+The `onPaymentCreated` event is raised with the following event argument object:
 
 {:.code-view-header}
 **onPaymentCreated event object**
@@ -224,9 +224,9 @@ following event argument object:
 
 ## `onPaymentFailed`
 
-This event triggers when a payment has failed, disabling further attempts to
-perform a payment. The `onPaymentFailed` event is raised with the following
-event argument object:
+{% include events/onpaymentfailed.md %}
+
+The `onPaymentFailed` event is raised with the following event argument object:
 
 {:.code-view-header}
 **onPaymentFailed event object**
@@ -298,10 +298,9 @@ object:
 
 ## `onPaymentPending`
 
-This events triggers when a payment enters a paying state ( `Sale`, `Authorize`,
-`Cancel`etc). The `onPaymentPending` event
-will be followed by either `onPaymentPaid`, `onPaymentFailed` or
-`onPaymentTransactionFailed` based on the result of the payment. Read more about
+{% include events/onpaymentpending.md %}
+
+ Read more about
 these events below.
 
 {:.code-view-header}
@@ -342,11 +341,11 @@ argument object:
 
 ## `onPaymentTransactionFailed`
 
-This event triggers when a payment attempt fails, further attempts can be made
-for the payment. An error message will appear in the payment UI, and the
-payer will be able to try again or choose another payment instrument. The
-`onPaymentTransactionFailed` event is raised with the following event argument
-object:
+{% include events/onpaymenttransactionfailed.md %}
+
+An error message will appear in the payment UI, and the payer will be able to
+try again or choose another payment instrument. The `onPaymentTransactionFailed`
+event is raised with the following event argument object:
 
 {:.code-view-header}
 **onPaymentTransactionFailed event object**
