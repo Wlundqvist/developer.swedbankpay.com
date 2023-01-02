@@ -84,7 +84,7 @@ object:
 | Field       | Type     | Description                                                    |
 | :---------- | :------- | :------------------------------------------------------------- |
 | `origin`    | `string` | `{{ api_resource }}`, identifies the system that originated the error. |
-| `id`        | `string` | {% include field-description-id.md %}                        |
+| `id`        | `string` | {% include fields/id.md %}                        |
 | `details`   | `string` | A human readable and descriptive text of the error.
 |
 
@@ -114,7 +114,7 @@ will be raised with the following event argument object:
 | Field        | Type     | Description                                                           |
 | :----------- | :------- | :--------------------------------------                               |
 | `event`      | `string` | The name of the event raised.                                         |
-| `paymentOrder`         | `string` | {% include field-description-id.md %}                       |
+| `paymentOrder`         | `string` | {% include fields/id.md %}                       |
 | `redirectUrl` | `string` | The external URL where the user will be redirected.                  |
 
 ## `onPaymentAborted`
@@ -136,7 +136,7 @@ object:
 {:.table .table-striped}
 | Field         | Type     | Description                                                    |
 | :------------ | :------- | :------------------------------------------------------------- |
-| `id`          | `string` | {% include field-description-id.md %}                          |
+| `id`          | `string` | {% include fields/id.md %}                          |
 | `redirectUrl` | `string` | The URL the user will be redirect to after a cancelled payment. |
 
 ## `onPaymentCanceled`
@@ -167,7 +167,7 @@ It will be raised with the following event argument object:
 | Field         | Type     | Description                                                     |
 | :------------ | :------- | :-------------------------------------------------------------  |
 | `event`       | `string` | The name of the event raised.                                   |
-| `paymentOrder`          | `string` | {% include field-description-id.md %}                 |
+| `paymentOrder`          | `string` | {% include fields/id.md %}                 |
 | `redirectUrl` | `string` | The URL the user will be redirect to after a cancelled payment. |
 
 ## `onPaymentCompleted`
@@ -197,7 +197,7 @@ It will be raised with the following event argument object:
 | Field         | Type     | Description                                                         |
 | :------------ | :------- | :-------------------------------------------------------------      |
 | `event`       | `string` | The name of the event raised.                                       |
-| `paymentOrder`          | `string` | {% include field-description-id.md %}                     |
+| `paymentOrder`          | `string` | {% include fields/id.md %}                     |
 | `redirectUrl` | `string` | The URL the user will be redirect to after completing the payment.  |
 
 ## `onPaymentCreated`
@@ -219,7 +219,7 @@ following event argument object:
 {:.table .table-striped}
 | Field        | Type     | Description                                                                                     |
 | :----------- | :------- | :---------------------------------------------------------------------------------------------- |
-| `id`         | `string` | {% include field-description-id.md %}                                                           |
+| `id`         | `string` | {% include fields/id.md %}                                                           |
 | `instrument` | `string` | `Creditcard`, `vipps`, `swish`, `invoice`. The instrument selected when initiating the payment. |
 
 ## `onPaymentFailed`
@@ -241,7 +241,7 @@ event argument object:
 {:.table .table-striped}
 | Field         | Type     | Description                                                  |
 | :------------ | :------- | :----------------------------------------------------------- |
-| `id`          | `string` | {% include field-description-id.md %}                        |
+| `id`          | `string` | {% include fields/id.md %}                        |
 | `redirectUrl` | `string` | The URL the user will be redirect to after a failed payment. |
 
 ## `onPaymentInstrumentSelected`
@@ -270,7 +270,7 @@ will be raised with the following event argument object:
 | Field        | Type     | Description                                                           |
 | :----------- | :------- | :--------------------------------------                               |
 | `event`     | `string` | The name of the event raised.                                          |
-| `paymentOrder`        | `string` | {% include field-description-id.md %}                        |
+| `paymentOrder`        | `string` | {% include fields/id.md %}                        |
 | `instrument` | `string` | `Creditcard`, `vipps`, `swish`, `invoice`. The instrument selected by
 the user.                                                                                         |
 
@@ -293,7 +293,7 @@ object:
 {:.table .table-striped}
 | Field         | Type     | Description                                                     |
 | :------------ | :------- | :-------------------------------------------------------------- |
-| `id`          | `string` | {% include field-description-id.md %}                           |
+| `id`          | `string` | {% include fields/id.md %}                           |
 | `redirectUrl` | `string` | The URL the user will be redirect to after a completed payment. |
 
 ## `onPaymentPending`
@@ -316,7 +316,7 @@ these events below.
 {:.table .table-striped}
 | Field         | Type     | Description                                                     |
 | :------------ | :------- | :-------------------------------------------------------------- |
-| `id`          | `string` | {% include field-description-id.md %}                           |
+| `id`          | `string` | {% include fields/id.md %}                           |
 
 ## `onPaymentToS`
 
@@ -361,7 +361,7 @@ object:
 {:.table .table-striped}
 | Field     | Type     | Description                                         |
 | :-------- | :------- | :-------------------------------------------------- |
-| `id`      | `string` | {% include field-description-id.md %}               |
+| `id`      | `string` | {% include fields/id.md %}               |
 | `details` | `string` | A human readable and descriptive text of the error. |
 
 ## `onShippingDetailsAvailable`
