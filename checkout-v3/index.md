@@ -90,8 +90,8 @@ device used.
 We offer a variety of payment instruments and features designed to meet your
 business' needs, regardless of whether you choose the **Full Checkout** or
 **Payments Only**. You can choose among **Apple Pay** (on iOS devices),
-**card, invoice (including monthly payments), MobilePay, Swish, Trustly** and
-**Vipps** depending on the country you are in.
+**Click to Pay, card, invoice (including monthly payments), MobilePay, Swish,**
+**Trustly** and **Vipps** depending on the country you are in.
 
 -   **Authentication:** The process of verifying the payer's identity.
 
